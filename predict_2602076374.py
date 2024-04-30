@@ -26,24 +26,24 @@ def main():
 
     # Add user input components for 10 features
     #input one by one
-    id=st.number_input("id", 0, 100000)
-    customer_id=st.number_input("Customer Id", 0, 10000000)
+    id=st.number_input("id", 0, 200000)
+    customer_id=st.number_input("Customer Id", 0, 15000000)
     surname = st.text_input("Surname")
-    creditscore = st.number_input("Credit Score", min_value=0.0, max_value=1000.0)
+    creditscore = st.number_input("Credit Score", 350, 850)
     geography=st.radio("Geography", ["France","Germany", "Spain"])
-    gender=st.radio("Gender", ["Male","Female"])
-    age=st.number_input("Age", 0, 100)
+    gender=st.selectbox("Gender", ["Male","Female"])
+    age=st.number_input("Age", 18, 92)
     tenure=st.number_input("Tenure", 0,10)
-    balance=st.number_input("Balance", 0.0,1000000.0)
+    balance=st.number_input("Balance", 0.0,251000.0)
     numproducts=st.radio("Number of Products", ["1","2", "3", "4"])
     creditcard=st.radio("Are you have a Credit Card? [0=No, 1=Yes]", ["0","1"])
     activeMem=st.radio("Are you an Active Member? [0=No, 1=Yes]", ["0","1"])
-    estimatedSal=st.number_input("Estimated Salary", 0.0, 1000000.0)
+    estimatedSal=st.number_input("Estimated Salary", 11.580, 199992.48)
 
 
     data = {'Unnamed: 0': 0, 'id': int(id), 'CustomerId': int(customer_id), 'Surname': surname,
-            'CreditScore': float(creditscore), 'Geography':geography, 'Gender':gender,
-            'Age': float(age), 'Tenure':int(tenure), 'Balance': float(balance),
+            'CreditScore': int(creditscore), 'Geography':geography, 'Gender':gender,
+            'Age': int(age), 'Tenure':int(tenure), 'Balance': float(balance),
             'NumOfProducts':int(numproducts), 'HasCrCard': int(creditcard),
             'IsActiveMember':int(activeMem),'EstimatedSalary':float(estimatedSal)}
 
@@ -79,4 +79,6 @@ def make_prediction(features):
 
 if __name__ == '__main__':
     main()
+
+pip install streamlit
 
