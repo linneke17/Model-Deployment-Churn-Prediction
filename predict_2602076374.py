@@ -80,5 +80,3 @@ def make_prediction(features):
 if __name__ == '__main__':
     main()
 
-pip install streamlit
-
