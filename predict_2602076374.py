@@ -31,7 +31,7 @@ def main():
     surname = st.text_input("Surname")
     creditscore = st.number_input("Credit Score", 350, 850)
     geography=st.radio("Geography", ["France","Germany", "Spain"])
-    gender=st.selectbox("Gender", ["Male","Female"])
+    gender=st.radio("Gender", ["Male","Female"])
     age=st.number_input("Age", 18, 92)
     tenure=st.number_input("Tenure", 0,10)
     balance=st.number_input("Balance", 0.0,251000.0)
