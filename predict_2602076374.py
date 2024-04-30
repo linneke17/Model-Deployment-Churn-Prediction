@@ -27,7 +27,7 @@ def main():
     # Add user input components for 10 features
     #input one by one
     id=st.number_input("id", 0, 200000)
-    customer_id=st.number_input("Customer Id", 0, 15000000)
+    customer_id=st.number_input("Customer Id", 0, 150000000)
     surname = st.text_input("Surname")
     creditscore = st.number_input("Credit Score", 350, 850)
     geography=st.radio("Geography", ["France","Germany", "Spain"])
